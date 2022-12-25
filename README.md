@@ -1,4 +1,5 @@
-# out_door_pm2_5_sensor
+# ESP8266 outdoor PM2.5 Sensor
+
 Outdoor PM 2.5 Sensor with following features
 
 1. Sinric Pro
