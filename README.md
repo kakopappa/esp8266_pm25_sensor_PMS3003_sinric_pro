@@ -16,4 +16,13 @@ Outdoor PM 2.5 Sensor with following features
 | PMS3003 RX | GPIO 12 |
 | WS2812 LED | GPIO 2  |
 
-![PMS3003](final_product.png)
+## Installtion 
+
+![PMS3003](images/final_product.png)
+
+## Alters
+
+When PM 2.5 level is above 50 ug/mg outside, I get a push notification :)
+
+![Sinric Pro PM 2.5 push notification](images/IMG-5768.jpg)
+![Sinric Pro PM Air Quality Sensor](images/IMG-5772.PNG)
