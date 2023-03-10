@@ -58,14 +58,16 @@ void sendPM25Level() {
   if (last_millis && current_millis - last_millis < UPLOAD_INTERVAL) return;
   last_millis = current_millis;
 
-  int pm10 = 0;
+  pm_level_t e2 = pms.get_pm_level();
+  int pm10  = e2.pm10;
+  int pm2_5 = e2.pm25;
   int pm1 = 0;
-  int pm2_5 = pms.get_pm25();
-
-  DEBUG_PRINTF_P("PM 2.5 level: %u\r\n", pm2_5); 
+  
+  DEBUG_PRINTF_P("PM 2.5 level: %u\r\n", e2.pm25); 
+  DEBUG_PRINTF_P("PM 10 level: %u\r\n", e2.pm10); 
 
   // set the LED indicator
-  indicator.setIndicator(pm2_5);      
+  indicator.setIndicator(e2.pm25);      
   
   if(pm2_5 > 0) {
     sensor.sendAirQualityEvent(pm1, pm2_5, pm10, "PERIODIC_POLL");  
